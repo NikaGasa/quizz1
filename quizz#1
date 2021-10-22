@@ -1,0 +1,17 @@
+fun main() {
+    val p1 = Point(50, 69,)
+    println(p1.toString())
+    val p2 = Point(40, 60,)
+    if (p1.equals(p2))
+        println("p1 equals p2")
+    else
+        println("p1 doesn't equal to p2")
+
+}
+data class Point(var x: Int, var y: Int) {
+    var fcoordiante: Int = x
+    var scoordinate: Int = y
+    fun move(): Pair<Int, Int> {
+        return Pair(fcoordiante * -1, scoordinate * -1)
+    }
+}
